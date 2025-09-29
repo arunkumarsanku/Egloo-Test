@@ -93,6 +93,21 @@ body {
   display: none;
   min-width: 250px;
 }
+.dropdown .dropdown-menu li {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgb(246.5, 246.5, 246.5);
+}
+.dropdown .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+.dropdown .dropdown-menu li a {
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+}
+.dropdown .dropdown-menu li a:hover {
+  background: #f5f5f5;
+}
 
 .hero {
   text-align: center;
@@ -106,4 +121,128 @@ body {
 .hero p {
   font-size: 1rem;
   color: #555;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 2rem 4rem;
+}
+.cards-container .card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+.cards-container .card:hover {
+  transform: translateY(-4px);
+}
+.cards-container .card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.cards-container .card .card-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  gap: 1rem;
+  padding: 1rem;
+}
+.cards-container .card .card-content .icons {
+  display: flex;
+  gap: 14px;
+}
+.cards-container .card .card-content .icons .icon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: #333;
+}
+.cards-container .card .card-content .icons .icon img {
+  width: 20px;
+  height: 20px;
+}
+.cards-container .card .card-content h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+}
+.cards-container .card .card-content .price-block .label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+.cards-container .card .card-content .price-block .price {
+  display: flex;
+  justify-content: space-between;
+}
+.cards-container .card .card-content .price-block .price .amount {
+  font-weight: 700;
+}
+.cards-container .card .card-content .price-block .price .iva {
+  font-size: 0.8rem;
+  color: #555;
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.cards-container .card .card-content button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #333;
+  padding: 0.8rem 1rem;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  margin-top: auto;
+  transition: all 0.2s ease;
+}
+.cards-container .card .card-content button:hover {
+  background: #333;
+  color: #fff;
+}
+.cards-container .card .card-content button:hover span:last-child {
+  color: #fff;
+}
+.cards-container .card.full-width {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 77% 23%;
+}
+.cards-container .card.full-width img {
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+.cards-container .card.full-width .card-content {
+  padding: 1.5rem;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cards-container .card.full-width {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
 }

@@ -5,9 +5,15 @@
   "scripts": {
     "build:css": "sass src/style.scss public/style.css --no-source-map",
     "build:js": "tsc",
-    "build": "npm run build:css && npm run build:js"
+    "build": "npm run build:css && npm run build:js",
+    "watch:css": "sass --watch src/style.scss public/style.css",
+    "watch:js": "tsc --watch",
+    "dev": "npm-run-all --parallel watch:*",
+    "start": "npm run build && start index.html",
+    "prepare": "npm run build"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "sass": "^1.77.0",
     "typescript": "^5.4.0"
   }

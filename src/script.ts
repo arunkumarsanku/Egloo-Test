@@ -1,6 +1,6 @@
-type IconName = "wine" | "fork" | "lotus" | "clock";
+type IconName = "wine" | "fork" | "lotus" | "clock";   // Icon types
 
-interface Card {
+interface Card {  // Card structure
   img: string;
   title: string;
   desc: string;
@@ -11,14 +11,14 @@ interface Card {
   wide: boolean;
 }
 
-const ICONS: Record<IconName, string> = {
+const ICONS: Record<IconName, string> = { // Icon paths
   wine:  "./assets/images/glass-with-wine.png",
   fork:  "./assets/images/fork.png",
   lotus: "./assets/images/lotus.png",
   clock: "./assets/images/clock.png",
 };
 
-const CARDS: Card[] = [
+const CARDS: Card[] = [                   // Card data
   {
     img: "./assets/images/3-wines-experience.png",
     title: "3 WINES EXPERIENCE",
@@ -91,7 +91,7 @@ const CARDS: Card[] = [
   }
 ];
 
-const escapeHtml = (s: string): string =>
+const escapeHtml = (s: string): string => // Escape HTML special characters
   String(s)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -99,7 +99,7 @@ const escapeHtml = (s: string): string =>
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 
-function renderIcons(icons: IconName[], duration: number): string {
+function renderIcons(icons: IconName[], duration: number): string { // Render icons HTML
   return `
     <div class="icons">
       ${icons.map((name) => {
@@ -113,7 +113,7 @@ function renderIcons(icons: IconName[], duration: number): string {
     </div>`;
 }
 
-function renderCard(card: Card): string {
+function renderCard(card: Card): string { // Render card HTML
   const wideClass = card.wide ? "card full-width" : "card";
   return `
     <article class="${wideClass}" id="${card.title.replace(/\s+/g, '-')}">
@@ -137,7 +137,7 @@ function renderCard(card: Card): string {
     </article>`;
 }
 
-function renderMenuItem(card: Card): string {
+function renderMenuItem(card: Card): string { // Render menu item HTML
   return `
     <li>
       <a href="#${card.title.replace(/\s+/g, '-')}">
@@ -147,7 +147,7 @@ function renderMenuItem(card: Card): string {
     </li>`;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { // On DOM ready
   const cardsContainer = document.getElementById("cards");
   const menu = document.getElementById("experience-menu");
 
