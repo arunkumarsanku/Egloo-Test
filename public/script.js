@@ -77,7 +77,8 @@ const CARDS = [
         wide: true
     }
 ];
-const escapeHtml = (s) => String(s)
+const escapeHtml = (s) => // Escape HTML special characters
+ String(s)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
