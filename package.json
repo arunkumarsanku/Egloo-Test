@@ -1,0 +1,14 @@
+{
+  "name": "wine-experiences",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "sass src/style.scss public/style.css --no-source-map",
+    "build:js": "tsc",
+    "build": "npm run build:css && npm run build:js"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0",
+    "typescript": "^5.4.0"
+  }
+}
