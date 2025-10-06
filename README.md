@@ -5,7 +5,7 @@ It demonstrates use of **HTML, SCSS, and TypeScript** without external framework
 
 ---
 
-## ✨ Features
+##  Features
 - Responsive header and navigation bar  
 - Google-style brand logo  
 - Dynamic cards grid rendered from TypeScript data  
@@ -41,7 +41,7 @@ wine-experiences/
 └── README.md              # Project documentation
 ```
 ---
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (>= 18)  
@@ -76,8 +76,10 @@ npm run dev
 ```
 
 
-## 🔮 Future Improvements  
+##  Future Improvements  
 - Load card data from JSON or API
 - Add keyboard accessibility for dropdown
 - Add dark mode via SCSS variables
 - Add unit tests
+
+![Output Page](assets/images/output_page.jpg)
