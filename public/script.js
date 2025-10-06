@@ -68,7 +68,7 @@ const CARDS = [
     },
     {
         img: "./assets/images/coteau-la-tour-experience2.png",
-        title: "CÔTEAU LA TOUR EXPERIENCE 2",
+        title: "CÔTEAU LA TOUR EXPERIENCE PLUS",
         desc: "Degustazione di 5 vini accompagnati da un tagliere della gastronomia locale e visita in cantina e barricaia. Tour del vigneto di Côteau e brindisi nella torre medievale",
         price: "A partire da €346,00",
         iva: "IVA INCLUSA",
