@@ -125,7 +125,6 @@ function renderMenuItem(card) {
     <li>
       <a href="#${card.title.replace(/\s+/g, '-')}">
         <span class="title">${escapeHtml(card.title)}</span>
-        <span class="price">${escapeHtml(card.price)}</span>
       </a>
     </li>`;
 }
